@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% comment %}
+    <title>Deepankumar Palaniyappan | Software Developer</title>
+    {% endcomment %}
+    <title>me</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Loading Screen -->
+    <div class="page-loader">
+      <div class="loader-content">
+        <div class="terminal-loader">
+          <div class="terminal-line">Initializing system...</div>
+          <div class="terminal-line">Loading portfolio...</div>
+          <div class="terminal-line">Ready.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Single Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- Terminal Background -->
+    <div class="terminal-bg">
+      <canvas id="matrix-canvas"></canvas>
+      <div class="terminal-grid"></div>
+      <div class="code-lines"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="terminal-nav" id="navbar">
+      <div class="nav-wrapper">
+        <div class="nav-logo">
+          <span class="terminal-prompt">$</span>
+          <span class="logo-name">deepankumar</span>
+          <span class="cursor-blink-nav">_</span>
+        </div>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#home" class="nav-link" data-magnetic>./home</a></li>
+          <li><a href="#about" class="nav-link" data-magnetic>./about</a></li>
+          <li>
+            <a href="#services" class="nav-link" data-magnetic>./services</a>
+          </li>
+          <li><a href="#skills" class="nav-link" data-magnetic>./skills</a></li>
+          <li>
+            <a href="#experience" class="nav-link" data-magnetic
+              >./experience</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="nav-link" data-magnetic>./projects</a>
+          </li>
+          <li>
+            <a href="#achievements" class="nav-link" data-magnetic
+              >./achievements</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-magnetic>./contact</a>
+          </li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-terminal">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+              </div>
+              <div class="terminal-title">deepankumar@portfolio:~</div>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="prompt">$</span>
+                <span class="command">whoami</span>
+              </div>
+              <div class="terminal-output" data-animate="type">
+                Deepankumar Palaniyappan
+              </div>
+              <div class="terminal-line">
+                <span class="prompt">$</span>
+                <span class="command">cat about.txt</span>
+              </div>
+              <div class="terminal-output" data-animate="type" data-delay="500">
+                Junior Software Developer | 1.8 Years Experience
+                <br />Full-Stack Development | Backend Architect | Cloud
+                Engineer
+              </div>
+              <div class="terminal-line">
+                <span class="prompt">$</span>
+                <span class="command typing-command" id="typing-command"></span>
+                <span class="cursor-blink">_</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-stats-terminal">
+            <div class="stat-terminal">
+              <div class="stat-number">1.8+</div>
+              <div class="stat-label">Years</div>
+            </div>
+            <div class="stat-terminal">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-terminal">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Dedicated</div>
+            </div>
+          </div>
+          <div class="hero-actions-terminal">
+            <a href="#projects" class="btn-terminal" data-magnetic>
+              <span>view_projects()</span>
+            </a>
+            <a
+              href="#contact"
+              class="btn-terminal btn-secondary-terminal"
+              data-magnetic
+            >
+              <span>contact_me()</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-terminal about-terminal">
+      <div class="container-terminal">
+        <div class="section-header-terminal" data-animate="fade-up">
+          <span class="section-number">[01]</span>
+          <h2 class="section-title-terminal">about_me()</h2>
+        </div>
+        <div class="about-grid-terminal">
+          <div class="about-content-terminal" data-animate="fade-right">
+            <div class="code-block-terminal">
+              <div class="code-line">
+                <span class="code-keyword">const</span>
+                <span class="code-var">developer</span> = {
+              </div>
+              <div class="code-line indent">
+                <span class="code-property">name</span>:
+                <span class="code-string">'Deepankumar Palaniyappan'</span>,
+              </div>
+              <div class="code-line indent">
+                <span class="code-property">role</span>:
+                <span class="code-string">'Junior Software Developer'</span>,
+              </div>
+              <div class="code-line indent">
+                <span class="code-property">experience</span>:
+                <span class="code-number">1.8</span>,
+              </div>
+              <div class="code-line indent">
+                <span class="code-property">skills</span>: [
+              </div>
+              <div class="code-line indent-2">
+                <span class="code-string">'Full-Stack Development'</span>,
+              </div>
+              <div class="code-line indent-2">
+                <span class="code-string">'Backend Architecture'</span>,
+              </div>
+              <div class="code-line indent-2">
+                <span class="code-string">'Cloud Deployment'</span>
+              </div>
+              <div class="code-line indent">];</div>
+              <div class="code-line">};</div>
+            </div>
+            <p class="about-text">
+              I'm a passionate Junior Software Developer with 1.8 years of
+              experience in front-end and back-end development. I specialize in
+              building scalable web applications using Node.js and Java Spring
+              Boot, implementing RESTful APIs and microservices for scalability.
+            </p>
+            <p class="about-text">
+              My expertise includes designing backend systems with Spring Boot,
+              leveraging Spring Data JPA, Spring Security, and Spring MVC. I
+              implement database solutions with MySQL and Hibernate, and design
+              responsive user interfaces with modern web technologies.
+            </p>
+          </div>
+          <div class="about-visual-terminal" data-animate="fade-left">
+            <div class="terminal-card">
+              <div class="card-header">
+                <span>developer_profile.js</span>
+              </div>
+              <div class="card-content">
+                <div class="profile-stats">
+                  <div class="stat-item">
+                    <span class="stat-key">Location:</span>
+                    <span class="stat-value">Coimbatore, India</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-key">Education:</span>
+                    <span class="stat-value">Mechanical Engineering</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-key">Company:</span>
+                    <span class="stat-value">Widelast Technology</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-key">Status:</span>
+                    <span class="stat-value available">Available</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-terminal services-terminal">
+      <div class="container-terminal">
+        <div class="section-header-terminal" data-animate="fade-up">
+          <span class="section-number">[02]</span>
+          <h2 class="section-title-terminal">services()</h2>
+        </div>
+        <div class="services-grid-terminal">
+          <div
+            class="service-card-terminal"
+            data-animate="fade-up"
+            data-delay="100"
+          >
+            <div class="service-icon-terminal">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="service-title-terminal">Backend Development</h3>
+            <p class="service-description-terminal">
+              Building robust and scalable backend systems using Node.js, Java
+              Spring Boot, and microservices architecture.
+            </p>
+            <div class="service-tech">
+              <span>Node.js</span>
+              <span>Spring Boot</span>
+              <span>Microservices</span>
+            </div>
+          </div>
+          <div
+            class="service-card-terminal"
+            data-animate="fade-up"
+            data-delay="200"
+          >
+            <div class="service-icon-terminal">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3 class="service-title-terminal">Cloud Deployment</h3>
+            <p class="service-description-terminal">
+              Deploying and managing applications on AWS, implementing CI/CD
+              pipelines, and optimizing cloud infrastructure.
+            </p>
+            <div class="service-tech">
+              <span>AWS</span>
+              <span>Docker</span>
+              <span>CI/CD</span>
+            </div>
+          </div>
+          <div
+            class="service-card-terminal"
+            data-animate="fade-up"
+            data-delay="300"
+          >
+            <div class="service-icon-terminal">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3 class="service-title-terminal">API Integration</h3>
+            <p class="service-description-terminal">
+              Integrating third-party APIs including payment gateways, Google
+              services, and authentication systems.
+            </p>
+            <div class="service-tech">
+              <span>REST API</span>
+              <span>Stripe</span>
+              <span>Google APIs</span>
+            </div>
+          </div>
+          <div
+            class="service-card-terminal"
+            data-animate="fade-up"
+            data-delay="400"
+          >
+            <div class="service-icon-terminal">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="service-title-terminal">Database Design</h3>
+            <p class="service-description-terminal">
+              Designing and optimizing database schemas using MySQL, PostgreSQL,
+              and MongoDB with ORM frameworks.
+            </p>
+            <div class="service-tech">
+              <span>MySQL</span>
+              <span>PostgreSQL</span>
+              <span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-terminal skills-terminal">
+      <div class="container-terminal">
+        <div class="section-header-terminal" data-animate="fade-up">
+          <span class="section-number">[03]</span>
+          <h2 class="section-title-terminal">skills()</h2>
+        </div>
+        <div class="skills-container-terminal">
+          <div
+            class="skill-category-terminal"
+            data-animate="fade-up"
+            data-delay="100"
+          >
+            <div class="skill-header-terminal">
+              <i class="fas fa-server"></i>
+              <h3 class="skill-category-title">Backend</h3>
+            </div>
+            <div class="skill-items-terminal">
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">Node.js</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="90">90%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">Java</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="85">85%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">Spring Boot</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="88">88%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">Python</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="80">80%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">Express.js</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="85">85%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">REST APIs</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="95">95%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="skill-category-terminal"
+            data-animate="fade-up"
+            data-delay="200"
+          >
+            <div class="skill-header-terminal">
+              <i class="fas fa-cloud"></i>
+              <h3 class="skill-category-title">Cloud & DevOps</h3>
+            </div>
+            <div class="skill-items-terminal">
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">AWS</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="88">88%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">Docker</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="85">85%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">Kubernetes</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="80">80%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">CI/CD</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="82">82%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">EC2</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="85">85%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">S3</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="83">83%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="skill-category-terminal"
+            data-animate="fade-up"
+            data-delay="300"
+          >
+            <div class="skill-header-terminal">
+              <i class="fas fa-database"></i>
+              <h3 class="skill-category-title">Databases</h3>
+            </div>
+            <div class="skill-items-terminal">
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">MySQL</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="90">90%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">PostgreSQL</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="85">85%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">MongoDB</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="82">82%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">Redis</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="78">78%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">Hibernate</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="85">85%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="skill-category-terminal"
+            data-animate="fade-up"
+            data-delay="400"
+          >
+            <div class="skill-header-terminal">
+              <i class="fas fa-laptop-code"></i>
+              <h3 class="skill-category-title">Frontend</h3>
+            </div>
+            <div class="skill-items-terminal">
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">HTML5/CSS3</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="90">90%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">JavaScript</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="88">88%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">Bootstrap</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="85">85%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">jQuery</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="83">83%</div>
+                </div>
+              </div>
+              <div class="skill-item-terminal">
+                <div class="skill-name-terminal">React.js</div>
+                <div class="skill-bar-terminal">
+                  <div class="skill-progress-terminal" data-width="75">75%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-terminal experience-terminal">
+      <div class="container-terminal">
+        <div class="section-header-terminal" data-animate="fade-up">
+          <span class="section-number">[04]</span>
+          <h2 class="section-title-terminal">experience()</h2>
+        </div>
+        <div class="experience-timeline-terminal">
+          <div class="timeline-item-terminal" data-animate="fade-right">
+            <div class="timeline-marker-terminal"></div>
+            <div class="timeline-content-terminal">
+              <div class="timeline-date-terminal">2022 - Present</div>
+              <h3 class="timeline-title-terminal">Junior Software Developer</h3>
+              <h4 class="timeline-company-terminal">
+                Widelast Technology Pvt Ltd
+              </h4>
+              <p class="timeline-location-terminal">Coimbatore, India</p>
+              <ul class="timeline-details-terminal">
+                <li>
+                  <span class="code-keyword">→</span> Developed and maintained
+                  web applications using Node.js and Java Spring Boot
+                </li>
+                <li>
+                  <span class="code-keyword">→</span> Implemented RESTful APIs
+                  and microservices for scalability
+                </li>
+                <li>
+                  <span class="code-keyword">→</span> Designed backend systems
+                  with Spring Boot, leveraging Spring Data JPA, Spring Security,
+                  and Spring MVC
+                </li>
+                <li>
+                  <span class="code-keyword">→</span> Implemented database
+                  solutions with MySQL and Hibernate
+                </li>
+                <li>
+                  <span class="code-keyword">→</span> Designed responsive user
+                  interfaces with HTML, CSS, JavaScript, Bootstrap, and jQuery
+                </li>
+                <li>
+                  <span class="code-keyword">→</span> Integrated APIs like
+                  Google Maps, Google Auth, Stripe, and Razorpay
+                </li>
+                <li>
+                  <span class="code-keyword">→</span> Deployed Spring Boot
+                  applications on AWS EC2 with CI/CD pipelines
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-terminal projects-terminal">
+      <div class="container-terminal">
+        <div class="section-header-terminal" data-animate="fade-up">
+          <span class="section-number">[05]</span>
+          <h2 class="section-title-terminal">projects()</h2>
+        </div>
+        <div class="projects-grid-terminal">
+          <div
+            class="project-card-terminal"
+            data-animate="fade-up"
+            data-delay="100"
+          >
+            <div class="project-header-terminal">
+              <span class="project-folder">📁</span>
+              <span class="project-name">tamil-memorial-web</span>
+            </div>
+            <div class="project-content-terminal">
+              <h3 class="project-title-terminal">Tamil Memorial Web</h3>
+              <p class="project-description-terminal">
+                Integrated online portal for the global Tamil diaspora with
+                Obituary and Memory features. Features social login, Stripe
+                payment gateway, REST API, and RBAC.
+              </p>
+              <div class="project-tech-terminal">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Bootstrap</span>
+                <span>Stripe</span>
+              </div>
+              <div class="project-links-terminal">
+                <a href="#" class="project-link-terminal" data-magnetic>
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>Live</span>
+                </a>
+                <a href="#" class="project-link-terminal" data-magnetic>
+                  <i class="fab fa-github"></i>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card-terminal"
+            data-animate="fade-up"
+            data-delay="200"
+          >
+            <div class="project-header-terminal">
+              <span class="project-folder">📁</span>
+              <span class="project-name">murasam-media</span>
+            </div>
+            <div class="project-content-terminal">
+              <h3 class="project-title-terminal">Murasam Media</h3>
+              <p class="project-description-terminal">
+                Online portal for Tamil diaspora with News, Business directory,
+                and Obituary news with monetized features.
+              </p>
+              <div class="project-tech-terminal">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Stripe</span>
+                <span>Google APIs</span>
+              </div>
+              <div class="project-links-terminal">
+                <a href="#" class="project-link-terminal" data-magnetic>
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>Live</span>
+                </a>
+                <a href="#" class="project-link-terminal" data-magnetic>
+                  <i class="fab fa-github"></i>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card-terminal"
+            data-animate="fade-up"
+            data-delay="300"
+          >
+            <div class="project-header-terminal">
+              <span class="project-folder">📁</span>
+              <span class="project-name">house-rental-service</span>
+            </div>
+            <div class="project-content-terminal">
+              <h3 class="project-title-terminal">House Rental Service</h3>
+              <p class="project-description-terminal">
+                Online house rental management system for web and mobile
+                applications with geolocation and payment integration.
+              </p>
+              <div class="project-tech-terminal">
+                <span>PostgreSQL</span>
+                <span>Spring Boot</span>
+                <span>Firebase</span>
+                <span>Razorpay</span>
+              </div>
+              <div class="project-links-terminal">
+                <a href="#" class="project-link-terminal" data-magnetic>
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>Live</span>
+                </a>
+                <a href="#" class="project-link-terminal" data-magnetic>
+                  <i class="fab fa-github"></i>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card-terminal"
+            data-animate="fade-up"
+            data-delay="400"
+          >
+            <div class="project-header-terminal">
+              <span class="project-folder">📁</span>
+              <span class="project-name">endoctor</span>
+            </div>
+            <div class="project-content-terminal">
+              <h3 class="project-title-terminal">Endoctor</h3>
+              <p class="project-description-terminal">
+                Enterprise application to secure patient details in encrypted
+                manner based on RBAC using Node.js and Express.js.
+              </p>
+              <div class="project-tech-terminal">
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>TypeScript</span>
+                <span>MySQL</span>
+              </div>
+              <div class="project-links-terminal">
+                <a href="#" class="project-link-terminal" data-magnetic>
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>Live</span>
+                </a>
+                <a href="#" class="project-link-terminal" data-magnetic>
+                  <i class="fab fa-github"></i>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card-terminal"
+            data-animate="fade-up"
+            data-delay="500"
+          >
+            <div class="project-header-terminal">
+              <span class="project-folder">📁</span>
+              <span class="project-name">cutof-offers</span>
+            </div>
+            <div class="project-content-terminal">
+              <h3 class="project-title-terminal">Cutof Offers</h3>
+              <p class="project-description-terminal">
+                App connecting shoppers with similar purchasing goals. Features
+                AI-powered recommendations, live streaming, and payment
+                processing.
+              </p>
+              <div class="project-tech-terminal">
+                <span>Go</span>
+                <span>Python</span>
+                <span>PostgreSQL</span>
+                <span>MongoDB</span>
+              </div>
+              <div class="project-links-terminal">
+                <a href="#" class="project-link-terminal" data-magnetic>
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>Live</span>
+                </a>
+                <a href="#" class="project-link-terminal" data-magnetic>
+                  <i class="fab fa-github"></i>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-terminal achievements-terminal">
+      <div class="container-terminal">
+        <div class="section-header-terminal" data-animate="fade-up">
+          <span class="section-number">[06]</span>
+          <h2 class="section-title-terminal">achievements()</h2>
+        </div>
+        <div class="achievements-grid-terminal">
+          <div
+            class="achievement-card-terminal"
+            data-animate="fade-up"
+            data-delay="100"
+          >
+            <div class="achievement-icon-terminal">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3 class="achievement-title-terminal">Java Certification</h3>
+            <p class="achievement-description-terminal">
+              Live Wire National Skill Development
+            </p>
+            <div class="achievement-date">December 2022</div>
+          </div>
+          <div
+            class="achievement-card-terminal"
+            data-animate="fade-up"
+            data-delay="200"
+          >
+            <div class="achievement-icon-terminal">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3 class="achievement-title-terminal">C++ Certification</h3>
+            <p class="achievement-description-terminal">
+              Live Wire National Skill Development
+            </p>
+            <div class="achievement-date">November 2022</div>
+          </div>
+          <div
+            class="achievement-card-terminal"
+            data-animate="fade-up"
+            data-delay="300"
+          >
+            <div class="achievement-icon-terminal">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3 class="achievement-title-terminal">C & MySQL Certification</h3>
+            <p class="achievement-description-terminal">
+              Live Wire National Skill Development
+            </p>
+            <div class="achievement-date">October 2022</div>
+          </div>
+          <div
+            class="achievement-card-terminal"
+            data-animate="fade-up"
+            data-delay="400"
+          >
+            <div class="achievement-icon-terminal">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3 class="achievement-title-terminal">Full Stack Development</h3>
+            <p class="achievement-description-terminal">Naukri Certification</p>
+            <div class="achievement-date">2022</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-terminal contact-terminal">
+      <div class="container-terminal">
+        <div class="section-header-terminal" data-animate="fade-up">
+          <span class="section-number">[07]</span>
+          <h2 class="section-title-terminal">contact()</h2>
+        </div>
+        <div class="contact-grid-terminal">
+          <div class="contact-info-terminal" data-animate="fade-right">
+            <div class="terminal-window">
+              <div class="terminal-header">
+                <div class="terminal-buttons">
+                  <span class="btn-close"></span>
+                  <span class="btn-minimize"></span>
+                  <span class="btn-maximize"></span>
+                </div>
+                <div class="terminal-title">contact_info.txt</div>
+              </div>
+              <div class="terminal-body">
+                <div class="contact-item-terminal">
+                  <span class="prompt">$</span>
+                  <span class="command">email</span>
+                </div>
+                <div class="contact-output">
+                  <a href="mailto:pdeepankumar2023@gmail.com" data-magnetic>
+                    pdeepankumar2023@gmail.com
+                  </a>
+                </div>
+                <div class="contact-item-terminal">
+                  <span class="prompt">$</span>
+                  <span class="command">phone</span>
+                </div>
+                <div class="contact-output">
+                  <a href="tel:+918072617953" data-magnetic>+91 8072617953</a>
+                </div>
+                <div class="contact-item-terminal">
+                  <span class="prompt">$</span>
+                  <span class="command">location</span>
+                </div>
+                <div class="contact-output">Coimbatore, India</div>
+              </div>
+            </div>
+            <div class="social-links-terminal">
+              <a href="#" class="social-link-terminal" data-magnetic>
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="social-link-terminal" data-magnetic>
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="social-link-terminal" data-magnetic>
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div class="contact-form-terminal" data-animate="fade-left">
+            <div class="terminal-window">
+              <div class="terminal-header">
+                <div class="terminal-buttons">
+                  <span class="btn-close"></span>
+                  <span class="btn-minimize"></span>
+                  <span class="btn-maximize"></span>
+                </div>
+                <div class="terminal-title">send_message.sh</div>
+              </div>
+              <div class="terminal-body">
+                <form id="contact-form" class="form-terminal">
+                  <div class="form-group-terminal">
+                    <label class="form-label-terminal">
+                      <span class="prompt">$</span> Name:
+                    </label>
+                    <input
+                      type="text"
+                      class="form-input-terminal"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group-terminal">
+                    <label class="form-label-terminal">
+                      <span class="prompt">$</span> Email:
+                    </label>
+                    <input
+                      type="email"
+                      class="form-input-terminal"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                  <div class="form-group-terminal">
+                    <label class="form-label-terminal">
+                      <span class="prompt">$</span> Message:
+                    </label>
+                    <textarea
+                      class="form-input-terminal"
+                      rows="5"
+                      placeholder="Enter your message"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn-terminal" data-magnetic>
+                    <span>send_message()</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-terminal">
+      <div class="container-terminal">
+        <div class="footer-content-terminal">
+          <div class="terminal-line">
+            <span class="prompt">$</span>
+            <span class="command"
+              >echo "Built with passion and dedication"</span
+            >
+          </div>
+          <div class="terminal-output">
+            &copy; 2024 Deepankumar Palaniyappan. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
