@@ -1,0 +1,1 @@
+Place portfolio images here (for example, profile.webp or project screenshots). The current portfolio uses CSS and icon fonts, so no local image files were required when this package was generated. Update image paths in index.html or assets/css/style.css when adding images.

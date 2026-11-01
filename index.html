@@ -1,950 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% comment %}
-    <title>Deepankumar Palaniyappan | Software Developer</title>
-    {% endcomment %}
-    <title>me</title>
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f6f8">
+<meta name="description" content="Deepankumar Palaniyappan is a backend engineer building scalable distributed systems, resilient APIs, and high-performance services with Java, Spring Boot, Go, Kafka, PostgreSQL, Redis, and AWS.">
+<meta name="keywords" content="Deepankumar Palaniyappan, backend engineer, Java developer, Spring Boot, Golang, Kafka, microservices, distributed systems, PostgreSQL, Redis, AWS">
+<meta name="author" content="Deepankumar Palaniyappan">
+<meta property="og:title" content="Deepankumar Palaniyappan — Backend Engineer">
+<meta property="og:description" content="Engineering reliable systems for products that scale.">
+<meta property="og:type" content="website">
+<title>Deepankumar Palaniyappan — Backend Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Deepankumar Palaniyappan","jobTitle":"Backend Engineer","email":"deepankumarpalaniyappan@gmail.com","telephone":"+91-8072617953","address":{"@type":"PostalAddress","addressLocality":"Coimbatore","addressRegion":"Tamil Nadu","addressCountry":"IN"},"knowsAbout":["Java","Spring Boot","Golang","Microservices","Apache Kafka","PostgreSQL","Redis","gRPC","AWS","Distributed Systems"]}</script>
 
-  <body>
-    <!-- Loading Screen -->
-    <div class="page-loader">
-      <div class="loader-content">
-        <div class="terminal-loader">
-          <div class="terminal-line">Initializing system...</div>
-          <div class="terminal-line">Loading portfolio...</div>
-          <div class="terminal-line">Ready.</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- Single Custom Cursor -->
-    <div class="custom-cursor" id="customCursor"></div>
 
-    <!-- Terminal Background -->
-    <div class="terminal-bg">
-      <canvas id="matrix-canvas"></canvas>
-      <div class="terminal-grid"></div>
-      <div class="code-lines"></div>
-    </div>
 
-    <!-- Navigation -->
-    <nav class="terminal-nav" id="navbar">
-      <div class="nav-wrapper">
-        <div class="nav-logo">
-          <span class="terminal-prompt">$</span>
-          <span class="logo-name">deepankumar</span>
-          <span class="cursor-blink-nav">_</span>
-        </div>
-        <ul class="nav-links" id="nav-menu">
-          <li><a href="#home" class="nav-link" data-magnetic>./home</a></li>
-          <li><a href="#about" class="nav-link" data-magnetic>./about</a></li>
-          <li>
-            <a href="#services" class="nav-link" data-magnetic>./services</a>
-          </li>
-          <li><a href="#skills" class="nav-link" data-magnetic>./skills</a></li>
-          <li>
-            <a href="#experience" class="nav-link" data-magnetic
-              >./experience</a
-            >
-          </li>
-          <li>
-            <a href="#projects" class="nav-link" data-magnetic>./projects</a>
-          </li>
-          <li>
-            <a href="#achievements" class="nav-link" data-magnetic
-              >./achievements</a
-            >
-          </li>
-          <li>
-            <a href="#contact" class="nav-link" data-magnetic>./contact</a>
-          </li>
-        </ul>
-        <button class="nav-toggle" id="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-terminal">
-      <div class="hero-container">
-        <div class="hero-content">
-          <div class="terminal-window">
-            <div class="terminal-header">
-              <div class="terminal-buttons">
-                <span class="btn-close"></span>
-                <span class="btn-minimize"></span>
-                <span class="btn-maximize"></span>
-              </div>
-              <div class="terminal-title">deepankumar@portfolio:~</div>
-            </div>
-            <div class="terminal-body">
-              <div class="terminal-line">
-                <span class="prompt">$</span>
-                <span class="command">whoami</span>
-              </div>
-              <div class="terminal-output" data-animate="type">
-                Deepankumar Palaniyappan
-              </div>
-              <div class="terminal-line">
-                <span class="prompt">$</span>
-                <span class="command">cat about.txt</span>
-              </div>
-              <div class="terminal-output" data-animate="type" data-delay="500">
-                Junior Software Developer | 1.8 Years Experience
-                <br />Full-Stack Development | Backend Architect | Cloud
-                Engineer
-              </div>
-              <div class="terminal-line">
-                <span class="prompt">$</span>
-                <span class="command typing-command" id="typing-command"></span>
-                <span class="cursor-blink">_</span>
-              </div>
-            </div>
-          </div>
-          <div class="hero-stats-terminal">
-            <div class="stat-terminal">
-              <div class="stat-number">1.8+</div>
-              <div class="stat-label">Years</div>
-            </div>
-            <div class="stat-terminal">
-              <div class="stat-number">15+</div>
-              <div class="stat-label">Projects</div>
-            </div>
-            <div class="stat-terminal">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Dedicated</div>
-            </div>
-          </div>
-          <div class="hero-actions-terminal">
-            <a href="#projects" class="btn-terminal" data-magnetic>
-              <span>view_projects()</span>
-            </a>
-            <a
-              href="#contact"
-              class="btn-terminal btn-secondary-terminal"
-              data-magnetic
-            >
-              <span>contact_me()</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div><div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div><div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+<nav class="navbar navbar-expand-lg fixed-top" id="navbar" aria-label="Main navigation"><div class="container">
+<a class="brand" href="#home" aria-label="Deepankumar, home"><span class="brand-symbol">D</span><span class="brand-name">DEEPAN<span class="brand-slash">/</span>DEV</span><small>BACKEND ENGINEER</small></span></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navMenu"><ul class="navbar-nav ms-auto align-items-lg-center"><li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li><li class="nav-item"><a class="nav-link" href="#stack">STACK</a></li><li class="nav-item"><a class="nav-link" href="#work">WORK</a></li><li class="nav-item"><a class="nav-link" href="#experience">EXPERIENCE</a></li><li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li><li class="nav-item ms-lg-3"><a class="btn btn-primary btn-sm" href="mailto:deepankumarpalaniyappan@gmail.com">LET'S CONNECT <i class="bi bi-arrow-up-right ms-1"></i></a></li></ul></div>
+</div></nav>
+<main id="main">
+<section class="hero" id="home"><div class="hero-grid"></div><div class="orb one"></div><div class="orb two"></div><div class="container"><div class="row align-items-center gy-4">
+<div class="col-lg-7 reveal"><div class="hero-kicker"><span class="live-dot"></span> BACKEND ENGINEER <span class="hero-kicker-divider">/</span> COIMBATORE, INDIA</div>
+<div class="hero-role">JAVA · GO · DISTRIBUTED SYSTEMS</div>
+<h1><span class="muted-line">Deepankumar</span><br><span class="shine">Palaniyappan.</span></h1>
+<p class="hero-copy">I build backend systems where API design, data stores, asynchronous workflows, and production reliability work together — not just endpoints that pass a demo.</p>
+<div class="hero-facts"><span><b>3.6+</b><small>YEARS EXPERIENCE</small></span><span><b>04</b><small>SELECTED PROJECTS</small></span><span><b>IN</b><small>COIMBATORE, INDIA</small></span></div>
+<div class="hero-actions"><a class="btn btn-primary" href="#work">EXPLORE SELECTED WORK <i class="bi bi-arrow-down-right ms-2"></i></a><a class="btn btn-outline-light" href="mailto:deepankumarpalaniyappan@gmail.com"><i class="bi bi-envelope me-2"></i>CONTACT ME</a></div>
+<div class="micro-proof"><span><i class="bi bi-check2"></i> API design & service boundaries</span><span><i class="bi bi-check2"></i> Event-driven processing</span><span><i class="bi bi-check2"></i> Data & production reliability</span></div>
+</div>
+<div class="col-lg-5 reveal" data-delay="2"><div class="hero-right hero-blueprint">
+<div class="blueprint-top"><span><i class="bi bi-diagram-3"></i> A REQUEST THROUGH THE SYSTEM</span><span class="blueprint-status"><i></i> FLOW</span></div>
+<div class="blueprint-code"><div class="flow-step"><span class="flow-number">01</span><span class="flow-symbol"><i class="bi bi-braces"></i></span><span><b>API / Gateway</b><small>Validate · Authenticate</small></span></div><div class="flow-connector"><i></i></div><div class="flow-step"><span class="flow-number">02</span><span class="flow-symbol"><i class="bi bi-diagram-2"></i></span><span><b>Service layer</b><small>Business rules · Contracts</small></span></div><div class="flow-connector"><i></i></div><div class="flow-step"><span class="flow-number">03</span><span class="flow-symbol"><i class="bi bi-database"></i></span><span><b>Data & events</b><small>Persist · Publish · Process</small></span></div><div class="flow-connector"><i></i></div><div class="flow-step"><span class="flow-number">04</span><span class="flow-symbol flow-check"><i class="bi bi-check2"></i></span><span><b>Observable outcome</b><small>Metrics · Logs · Response</small></span></div></div>
+<div class="blueprint-divider"></div><div class="blueprint-stack"><span>WORKING ACROSS</span><div><b>APIs</b><i></i><b>DATA</b><i></i><b>EVENTS</b><i></i><b>INFRA</b></div></div>
+<div class="blueprint-foot"><span>JAVA / GO</span><span>DESIGN · BUILD · OPERATE</span></div>
+</div></div>
+</div><div class="hero-bottom"><div class="container"><span class="scroll-hint">SCROLL TO EXPLORE</span><span class="hero-index">01 — 06</span></div></div></div></section>
 
-    <!-- About Section -->
-    <section id="about" class="section-terminal about-terminal">
-      <div class="container-terminal">
-        <div class="section-header-terminal" data-animate="fade-up">
-          <span class="section-number">[01]</span>
-          <h2 class="section-title-terminal">about_me()</h2>
-        </div>
-        <div class="about-grid-terminal">
-          <div class="about-content-terminal" data-animate="fade-right">
-            <div class="code-block-terminal">
-              <div class="code-line">
-                <span class="code-keyword">const</span>
-                <span class="code-var">developer</span> = {
-              </div>
-              <div class="code-line indent">
-                <span class="code-property">name</span>:
-                <span class="code-string">'Deepankumar Palaniyappan'</span>,
-              </div>
-              <div class="code-line indent">
-                <span class="code-property">role</span>:
-                <span class="code-string">'Junior Software Developer'</span>,
-              </div>
-              <div class="code-line indent">
-                <span class="code-property">experience</span>:
-                <span class="code-number">1.8</span>,
-              </div>
-              <div class="code-line indent">
-                <span class="code-property">skills</span>: [
-              </div>
-              <div class="code-line indent-2">
-                <span class="code-string">'Full-Stack Development'</span>,
-              </div>
-              <div class="code-line indent-2">
-                <span class="code-string">'Backend Architecture'</span>,
-              </div>
-              <div class="code-line indent-2">
-                <span class="code-string">'Cloud Deployment'</span>
-              </div>
-              <div class="code-line indent">];</div>
-              <div class="code-line">};</div>
-            </div>
-            <p class="about-text">
-              I'm a passionate Junior Software Developer with 1.8 years of
-              experience in front-end and back-end development. I specialize in
-              building scalable web applications using Node.js and Java Spring
-              Boot, implementing RESTful APIs and microservices for scalability.
-            </p>
-            <p class="about-text">
-              My expertise includes designing backend systems with Spring Boot,
-              leveraging Spring Data JPA, Spring Security, and Spring MVC. I
-              implement database solutions with MySQL and Hibernate, and design
-              responsive user interfaces with modern web technologies.
-            </p>
-          </div>
-          <div class="about-visual-terminal" data-animate="fade-left">
-            <div class="terminal-card">
-              <div class="card-header">
-                <span>developer_profile.js</span>
-              </div>
-              <div class="card-content">
-                <div class="profile-stats">
-                  <div class="stat-item">
-                    <span class="stat-key">Location:</span>
-                    <span class="stat-value">Coimbatore, India</span>
-                  </div>
-                  <div class="stat-item">
-                    <span class="stat-key">Education:</span>
-                    <span class="stat-value">Mechanical Engineering</span>
-                  </div>
-                  <div class="stat-item">
-                    <span class="stat-key">Company:</span>
-                    <span class="stat-value">Widelast Technology</span>
-                  </div>
-                  <div class="stat-item">
-                    <span class="stat-key">Status:</span>
-                    <span class="stat-value available">Available</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="section alt" id="about"><div class="container"><div class="section-top reveal"><div><div class="section-label"><b>01 /</b> ENGINEERING PROFILE</div><h2>More than endpoints.<br><span class="soft">Systems thinking.</span></h2></div><p class="section-intro">I work at the intersection of backend architecture, data infrastructure, and production reliability — building services designed to evolve without falling apart.</p></div>
+<div class="bento">
+<div class="bento-card big reveal"><div class="bento-icon"><i class="bi bi-braces-asterisk"></i></div><div class="mini-label">THE ENGINEERING MINDSET</div><div class="big-stat">3.6<small>+ yrs</small></div><h3>Building for the real world</h3><p>From API contracts to database access patterns, I focus on the details that keep services secure, observable, maintainable, and ready for growth.</p><div class="stat-bottom"><span>BACKEND ENGINEERING</span><span><i class="bi bi-arrow-up-right"></i></span></div></div>
+<div class="bento-card reveal" data-delay="1"><div class="bento-icon"><i class="bi bi-diagram-3"></i></div><h3>Distributed by design</h3><p>Microservices, event-driven workflows, service boundaries, and failure-aware communication.</p><div class="tech-orbit"></div></div>
+<div class="bento-card reveal" data-delay="2"><div class="bento-icon"><i class="bi bi-speedometer2"></i></div><h3>Performance engineering</h3><p>Indexing, caching, query optimization, concurrency, and low-latency communication.</p><div class="bars"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+<div class="bento-card wide reveal"><div class="bento-icon"><i class="bi bi-stack"></i></div><h3>My core stack</h3><p>Tools I use to turn architecture into production systems.</p><div class="stack-pills"><span>JAVA</span><span>SPRING BOOT</span><span>GOLANG</span><span>APACHE KAFKA</span><span>POSTGRESQL</span><span>REDIS</span><span>gRPC</span><span>AWS</span></div></div>
+</div></div></section>
 
-    <!-- Services Section -->
-    <section id="services" class="section-terminal services-terminal">
-      <div class="container-terminal">
-        <div class="section-header-terminal" data-animate="fade-up">
-          <span class="section-number">[02]</span>
-          <h2 class="section-title-terminal">services()</h2>
-        </div>
-        <div class="services-grid-terminal">
-          <div
-            class="service-card-terminal"
-            data-animate="fade-up"
-            data-delay="100"
-          >
-            <div class="service-icon-terminal">
-              <i class="fas fa-code"></i>
-            </div>
-            <h3 class="service-title-terminal">Backend Development</h3>
-            <p class="service-description-terminal">
-              Building robust and scalable backend systems using Node.js, Java
-              Spring Boot, and microservices architecture.
-            </p>
-            <div class="service-tech">
-              <span>Node.js</span>
-              <span>Spring Boot</span>
-              <span>Microservices</span>
-            </div>
-          </div>
-          <div
-            class="service-card-terminal"
-            data-animate="fade-up"
-            data-delay="200"
-          >
-            <div class="service-icon-terminal">
-              <i class="fas fa-cloud"></i>
-            </div>
-            <h3 class="service-title-terminal">Cloud Deployment</h3>
-            <p class="service-description-terminal">
-              Deploying and managing applications on AWS, implementing CI/CD
-              pipelines, and optimizing cloud infrastructure.
-            </p>
-            <div class="service-tech">
-              <span>AWS</span>
-              <span>Docker</span>
-              <span>CI/CD</span>
-            </div>
-          </div>
-          <div
-            class="service-card-terminal"
-            data-animate="fade-up"
-            data-delay="300"
-          >
-            <div class="service-icon-terminal">
-              <i class="fas fa-plug"></i>
-            </div>
-            <h3 class="service-title-terminal">API Integration</h3>
-            <p class="service-description-terminal">
-              Integrating third-party APIs including payment gateways, Google
-              services, and authentication systems.
-            </p>
-            <div class="service-tech">
-              <span>REST API</span>
-              <span>Stripe</span>
-              <span>Google APIs</span>
-            </div>
-          </div>
-          <div
-            class="service-card-terminal"
-            data-animate="fade-up"
-            data-delay="400"
-          >
-            <div class="service-icon-terminal">
-              <i class="fas fa-database"></i>
-            </div>
-            <h3 class="service-title-terminal">Database Design</h3>
-            <p class="service-description-terminal">
-              Designing and optimizing database schemas using MySQL, PostgreSQL,
-              and MongoDB with ORM frameworks.
-            </p>
-            <div class="service-tech">
-              <span>MySQL</span>
-              <span>PostgreSQL</span>
-              <span>MongoDB</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="section" id="stack"><div class="container"><div class="section-top reveal"><div><div class="section-label"><b>02 /</b> TECHNICAL TOOLKIT</div><h2>A deliberate stack.<br><span class="soft">A systems-first approach.</span></h2></div><p class="section-intro">Technologies grouped by the engineering problems they help solve — not just a wall of logos.</p></div>
+<div class="skills-layout"><aside class="skills-aside reveal"><div class="eyebrow"><span class="live-dot"></span> PRIMARY FOCUS</div><h3 class="mt-3">Backend & distributed architecture</h3><p>Strongest in service development, API design, data access, asynchronous processing, and the reliability concerns that emerge in production.</p><div class="availability"><i class="bi bi-circle-fill" style="font-size:6px"></i> CONTINUOUSLY LEARNING</div><div class="stack-pills"><span>Clean architecture</span><span>Fault tolerance</span><span>Concurrency</span><span>Idempotency</span></div></aside>
+<div class="skill-categories">
+<div class="skill-tile reveal"><div class="skill-tile-top"><span class="skill-symbol"><i class="bi bi-code-slash"></i></span><span class="skill-index">01 / CODE</span></div><h4>Languages & APIs</h4><div class="skill-list"><span>Java</span><span>Go</span><span>REST</span><span>GraphQL</span><span>WebSockets</span><span>gRPC / Protobuf</span></div></div>
+<div class="skill-tile reveal" data-delay="1"><div class="skill-tile-top"><span class="skill-symbol"><i class="bi bi-boxes"></i></span><span class="skill-index">02 / ARCH</span></div><h4>Backend & messaging</h4><div class="skill-list"><span>Spring Boot</span><span>Microservices</span><span>Apache Kafka</span><span>Async workflows</span><span>Queue processing</span></div></div>
+<div class="skill-tile reveal" data-delay="1"><div class="skill-tile-top"><span class="skill-symbol"><i class="bi bi-database"></i></span><span class="skill-index">03 / DATA</span></div><h4>Databases & caching</h4><div class="skill-list"><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Cassandra</span><span>Redis</span><span>Indexing</span></div></div>
+<div class="skill-tile reveal" data-delay="2"><div class="skill-tile-top"><span class="skill-symbol"><i class="bi bi-shield-lock"></i></span><span class="skill-index">04 / SECURE</span></div><h4>Security & payments</h4><div class="skill-list"><span>Spring Security</span><span>JWT / RS256</span><span>RBAC / PBAC</span><span>Stripe</span><span>Razorpay</span><span>Webhooks</span></div></div>
+<div class="skill-tile reveal" data-delay="2"><div class="skill-tile-top"><span class="skill-symbol"><i class="bi bi-cloud-arrow-up"></i></span><span class="skill-index">05 / SHIP</span></div><h4>Cloud & delivery</h4><div class="skill-list"><span>AWS</span><span>Docker</span><span>Jenkins CI/CD</span><span>EC2 / S3 / SQS</span><span>Load balancing</span></div></div>
+<div class="skill-tile reveal" data-delay="3"><div class="skill-tile-top"><span class="skill-symbol"><i class="bi bi-activity"></i></span><span class="skill-index">06 / OPERATE</span></div><h4>Reliability & tooling</h4><div class="skill-list"><span>Health checks</span><span>Observability</span><span>Fault tolerance</span><span>Swagger / OpenAPI</span><span>Production debugging</span></div></div>
+</div></div>
+<div class="skill-canvas-wrap reveal">
+  <div class="canvas-head"><span class="canvas-dot"></span><span class="mono">TECH STACK / LIVE CANVAS</span><span class="canvas-count">12 NODES</span></div>
+  <div class="skill-canvas" aria-label="Animated technology icon constellation. Icons represent skills; hover an icon to pause its movement.">
+    <div class="canvas-grid"></div><svg class="canvas-lines" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true"><path d="M100 130 L240 70 L390 155 L530 60 L680 145 L840 70 L930 190 M240 70 L230 235 L390 155 L430 265 L680 145 L760 250 L930 190 M100 130 L230 235 M530 60 L430 265 M840 70 L760 250" fill="none" stroke="currentColor" stroke-opacity=".28" stroke-width="1.2" stroke-dasharray="4 6"/></svg>
+    <span class="skill-node node-java" title="Java"><i class="devicon-java-plain colored"></i><b>Java</b></span><span class="skill-node node-go" title="Go"><i class="devicon-go-original-wordmark colored"></i><b>Go</b></span><span class="skill-node node-spring" title="Spring Boot"><i class="devicon-spring-original colored"></i><b>Spring Boot</b></span><span class="skill-node node-kafka" title="Apache Kafka"><i class="devicon-apachekafka-original colored"></i><b>Kafka</b></span><span class="skill-node node-db" title="PostgreSQL"><i class="devicon-postgresql-plain colored"></i><b>PostgreSQL</b></span><span class="skill-node node-redis" title="Redis"><i class="devicon-redis-plain colored"></i><b>Redis</b></span><span class="skill-node node-docker" title="Docker"><i class="devicon-docker-plain colored"></i><b>Docker</b></span><span class="skill-node node-aws" title="AWS"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><b>AWS</b></span><span class="skill-node node-api" title="REST APIs"><i class="bi bi-braces"></i><b>REST APIs</b></span><span class="skill-node node-security" title="Spring Security"><i class="bi bi-shield-lock"></i><b>Security</b></span><span class="skill-node node-git" title="Git"><i class="devicon-git-plain colored"></i><b>Git</b></span><span class="skill-node node-grpc" title="gRPC / Protobuf"><i class="bi bi-diagram-3"></i><b>gRPC</b></span>
+    <div class="canvas-caption"><span>BACKEND</span><span>DATA</span><span>INFRASTRUCTURE</span></div>
+  </div><p class="canvas-note">Technologies I use across backend services, data, and delivery. Select any label to pause its movement.</p>
+</div>
+</div></section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section-terminal skills-terminal">
-      <div class="container-terminal">
-        <div class="section-header-terminal" data-animate="fade-up">
-          <span class="section-number">[03]</span>
-          <h2 class="section-title-terminal">skills()</h2>
-        </div>
-        <div class="skills-container-terminal">
-          <div
-            class="skill-category-terminal"
-            data-animate="fade-up"
-            data-delay="100"
-          >
-            <div class="skill-header-terminal">
-              <i class="fas fa-server"></i>
-              <h3 class="skill-category-title">Backend</h3>
-            </div>
-            <div class="skill-items-terminal">
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">Node.js</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="90">90%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">Java</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="85">85%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">Spring Boot</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="88">88%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">Python</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="80">80%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">Express.js</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="85">85%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">REST APIs</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="95">95%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="skill-category-terminal"
-            data-animate="fade-up"
-            data-delay="200"
-          >
-            <div class="skill-header-terminal">
-              <i class="fas fa-cloud"></i>
-              <h3 class="skill-category-title">Cloud & DevOps</h3>
-            </div>
-            <div class="skill-items-terminal">
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">AWS</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="88">88%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">Docker</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="85">85%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">Kubernetes</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="80">80%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">CI/CD</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="82">82%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">EC2</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="85">85%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">S3</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="83">83%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="skill-category-terminal"
-            data-animate="fade-up"
-            data-delay="300"
-          >
-            <div class="skill-header-terminal">
-              <i class="fas fa-database"></i>
-              <h3 class="skill-category-title">Databases</h3>
-            </div>
-            <div class="skill-items-terminal">
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">MySQL</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="90">90%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">PostgreSQL</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="85">85%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">MongoDB</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="82">82%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">Redis</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="78">78%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">Hibernate</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="85">85%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="skill-category-terminal"
-            data-animate="fade-up"
-            data-delay="400"
-          >
-            <div class="skill-header-terminal">
-              <i class="fas fa-laptop-code"></i>
-              <h3 class="skill-category-title">Frontend</h3>
-            </div>
-            <div class="skill-items-terminal">
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">HTML5/CSS3</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="90">90%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">JavaScript</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="88">88%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">Bootstrap</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="85">85%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">jQuery</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="83">83%</div>
-                </div>
-              </div>
-              <div class="skill-item-terminal">
-                <div class="skill-name-terminal">React.js</div>
-                <div class="skill-bar-terminal">
-                  <div class="skill-progress-terminal" data-width="75">75%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="section alt" id="work"><div class="container"><div class="section-top reveal"><div><div class="section-label"><b>03 /</b> SELECTED PROJECTS</div><h2>Real products.<br><span class="soft">Engineering underneath.</span></h2></div><p class="section-intro">A selection of platforms spanning commerce, location-aware workflows, service operations, and digital media.</p></div>
+<div class="project-list">
+<article class="project reveal"><div class="project-art art-commerce"><div class="art-icon"><i class="bi bi-bag-check"></i></div><div class="art-code">event.offer.created()<br>payment.authorize()<br>recommendation.refresh()</div></div><div><div class="project-top"><h3>Cutof Offers</h3><span class="project-number">PROJECT / 01</span></div><p>A distributed commerce platform for collaborative purchases, retail offers, and personalized recommendations.</p><div class="project-points"><span><i class="bi bi-arrow-up-right"></i> Kafka event-driven processing</span><span><i class="bi bi-arrow-up-right"></i> gRPC service communication</span><span><i class="bi bi-arrow-up-right"></i> Redis caching & payment workflows</span></div><div class="project-stack"><span>JAVA</span><span>SPRING BOOT</span><span>KAFKA</span><span>gRPC</span><span>REDIS</span><span>POSTGRESQL</span></div></div></article>
+<article class="project reveal"><div class="project-art art-home"><div class="art-icon"><i class="bi bi-geo-alt"></i></div><div class="art-code">property.search(location)<br>tenant.booking.create()<br>payment.verify()</div></div><div><div class="project-top"><h3>House Rental Service</h3><span class="project-number">PROJECT / 02</span></div><p>A rental management platform supporting property listings, tenant workflows, bookings, and location-based discovery.</p><div class="project-points"><span><i class="bi bi-arrow-up-right"></i> Layered Spring Boot services</span><span><i class="bi bi-arrow-up-right"></i> PostgreSQL data modeling</span><span><i class="bi bi-arrow-up-right"></i> Maps & Razorpay integration</span></div><div class="project-stack"><span>JAVA</span><span>SPRING BOOT</span><span>POSTGRESQL</span><span>GOOGLE MAPS</span><span>RAZORPAY</span></div><a class="project-link" href="https://forrentatoz.com/" target="_blank" rel="noopener noreferrer">VISIT LIVE PROJECT <i class="bi bi-arrow-up-right"></i></a></div></article>
+<article class="project reveal"><div class="project-art art-wash"><div class="art-icon"><i class="bi bi-car-front"></i></div><div class="art-code">service.schedule()<br>partner.assign()<br>payroll.calculate()</div></div><div><div class="project-top"><h3>WashEz</h3><span class="project-number">PROJECT / 03</span></div><p>A microservices-based car wash management platform connecting customers, service partners, and administrators.</p><div class="project-points"><span><i class="bi bi-arrow-up-right"></i> Modular service boundaries</span><span><i class="bi bi-arrow-up-right"></i> gRPC + PostgreSQL/sqlc</span><span><i class="bi bi-arrow-up-right"></i> RS256 JWT, RBAC & Redis</span></div><div class="project-stack"><span>GO</span><span>gRPC</span><span>POSTGRESQL</span><span>REDIS</span><span>JWT</span><span>RBAC</span></div><a class="project-link" href="https://washez.in/" target="_blank" rel="noopener noreferrer">VISIT LIVE PROJECT <i class="bi bi-arrow-up-right"></i></a></div></article>
+<article class="project reveal"><div class="project-art art-media"><div class="art-icon"><i class="bi bi-journal-richtext"></i></div><div class="art-code">content.publish()<br>access.authorize()<br>listing.discover()</div></div><div><div class="project-top"><h3>Murasam Media & Tamil Memorial</h3><span class="project-number">PROJECT / 04</span></div><p>A digital media and memorial platform for news, obituary updates, business directories, premium listings, and classified postings.</p><div class="project-points"><span><i class="bi bi-arrow-up-right"></i> Stateless REST API design</span><span><i class="bi bi-arrow-up-right"></i> Stripe monetization & RBAC</span><span><i class="bi bi-arrow-up-right"></i> Geolocation-based discovery</span></div><div class="project-stack"><span>JAVA</span><span>SPRING BOOT</span><span>STRIPE</span><span>RBAC</span><span>GOOGLE APIS</span></div></div></article>
+</div></div></section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section-terminal experience-terminal">
-      <div class="container-terminal">
-        <div class="section-header-terminal" data-animate="fade-up">
-          <span class="section-number">[04]</span>
-          <h2 class="section-title-terminal">experience()</h2>
-        </div>
-        <div class="experience-timeline-terminal">
-          <div class="timeline-item-terminal" data-animate="fade-right">
-            <div class="timeline-marker-terminal"></div>
-            <div class="timeline-content-terminal">
-              <div class="timeline-date-terminal">2022 - Present</div>
-              <h3 class="timeline-title-terminal">Junior Software Developer</h3>
-              <h4 class="timeline-company-terminal">
-                Widelast Technology Pvt Ltd
-              </h4>
-              <p class="timeline-location-terminal">Coimbatore, India</p>
-              <ul class="timeline-details-terminal">
-                <li>
-                  <span class="code-keyword">→</span> Developed and maintained
-                  web applications using Node.js and Java Spring Boot
-                </li>
-                <li>
-                  <span class="code-keyword">→</span> Implemented RESTful APIs
-                  and microservices for scalability
-                </li>
-                <li>
-                  <span class="code-keyword">→</span> Designed backend systems
-                  with Spring Boot, leveraging Spring Data JPA, Spring Security,
-                  and Spring MVC
-                </li>
-                <li>
-                  <span class="code-keyword">→</span> Implemented database
-                  solutions with MySQL and Hibernate
-                </li>
-                <li>
-                  <span class="code-keyword">→</span> Designed responsive user
-                  interfaces with HTML, CSS, JavaScript, Bootstrap, and jQuery
-                </li>
-                <li>
-                  <span class="code-keyword">→</span> Integrated APIs like
-                  Google Maps, Google Auth, Stripe, and Razorpay
-                </li>
-                <li>
-                  <span class="code-keyword">→</span> Deployed Spring Boot
-                  applications on AWS EC2 with CI/CD pipelines
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="section" id="engineering"><div class="container"><div class="section-top reveal"><div><div class="section-label"><b>04 /</b> ENGINEERING DEPTH</div><h2>How I think about<br><span class="soft">systems in production.</span></h2></div><p class="section-intro">The important work is often the decisions behind the code: defining boundaries, controlling failure, and keeping data consistent as systems grow.</p></div>
+<div class="depth-grid">
+<article class="depth-card depth-service reveal"><div class="depth-number">01</div><div class="depth-icon"><i class="bi bi-diagram-3"></i></div><h3>Service boundaries</h3><p>Shape microservices around clear responsibilities, explicit interfaces, and independently understandable workflows.</p><div class="depth-foot">MICROSERVICES · gRPC · REST</div></article>
+<article class="depth-card depth-async reveal" data-delay="1"><div class="depth-number">02</div><div class="depth-icon"><i class="bi bi-arrow-left-right"></i></div><h3>Async by design</h3><p>Use event-driven processing and queue-based workflows when producers and consumers should evolve independently.</p><div class="depth-foot">KAFKA · EVENTS · QUEUES</div></article>
+<article class="depth-card depth-data reveal" data-delay="2"><div class="depth-number">03</div><div class="depth-icon"><i class="bi bi-database-check"></i></div><h3>Data integrity</h3><p>Think carefully about transactions, idempotency, consistency, indexing, replication, and the role of caching.</p><div class="depth-foot">ACID · REDIS · SQL / NoSQL</div></article>
+<article class="depth-card depth-security reveal"><div class="depth-number">04</div><div class="depth-icon"><i class="bi bi-shield-check"></i></div><h3>Failure-aware APIs</h3><p>Build secure API workflows with access control, request validation, webhook handling, and recovery paths.</p><div class="depth-foot">JWT · RBAC · RECOVERY</div></article>
+<article class="depth-card depth-performance reveal" data-delay="1"><div class="depth-number">05</div><div class="depth-icon"><i class="bi bi-speedometer"></i></div><h3>Performance & scale</h3><p>Reduce avoidable work through query tuning, caching, pagination, concurrency control, and load-aware design.</p><div class="depth-foot">INDEXING · CACHING · CONCURRENCY</div></article>
+<article class="depth-card depth-ops reveal" data-delay="2"><div class="depth-number">06</div><div class="depth-icon"><i class="bi bi-activity"></i></div><h3>Operability</h3><p>Make services easier to deploy and troubleshoot with health checks, monitoring, API documentation, and repeatable delivery.</p><div class="depth-foot">AWS · JENKINS · ACTUATOR</div></article>
+</div></div></section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section-terminal projects-terminal">
-      <div class="container-terminal">
-        <div class="section-header-terminal" data-animate="fade-up">
-          <span class="section-number">[05]</span>
-          <h2 class="section-title-terminal">projects()</h2>
-        </div>
-        <div class="projects-grid-terminal">
-          <div
-            class="project-card-terminal"
-            data-animate="fade-up"
-            data-delay="100"
-          >
-            <div class="project-header-terminal">
-              <span class="project-folder">📁</span>
-              <span class="project-name">tamil-memorial-web</span>
-            </div>
-            <div class="project-content-terminal">
-              <h3 class="project-title-terminal">Tamil Memorial Web</h3>
-              <p class="project-description-terminal">
-                Integrated online portal for the global Tamil diaspora with
-                Obituary and Memory features. Features social login, Stripe
-                payment gateway, REST API, and RBAC.
-              </p>
-              <div class="project-tech-terminal">
-                <span>Java</span>
-                <span>Spring Boot</span>
-                <span>Bootstrap</span>
-                <span>Stripe</span>
-              </div>
-              <div class="project-links-terminal">
-                <a href="#" class="project-link-terminal" data-magnetic>
-                  <i class="fas fa-external-link-alt"></i>
-                  <span>Live</span>
-                </a>
-                <a href="#" class="project-link-terminal" data-magnetic>
-                  <i class="fab fa-github"></i>
-                  <span>Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="project-card-terminal"
-            data-animate="fade-up"
-            data-delay="200"
-          >
-            <div class="project-header-terminal">
-              <span class="project-folder">📁</span>
-              <span class="project-name">murasam-media</span>
-            </div>
-            <div class="project-content-terminal">
-              <h3 class="project-title-terminal">Murasam Media</h3>
-              <p class="project-description-terminal">
-                Online portal for Tamil diaspora with News, Business directory,
-                and Obituary news with monetized features.
-              </p>
-              <div class="project-tech-terminal">
-                <span>Java</span>
-                <span>Spring Boot</span>
-                <span>Stripe</span>
-                <span>Google APIs</span>
-              </div>
-              <div class="project-links-terminal">
-                <a href="#" class="project-link-terminal" data-magnetic>
-                  <i class="fas fa-external-link-alt"></i>
-                  <span>Live</span>
-                </a>
-                <a href="#" class="project-link-terminal" data-magnetic>
-                  <i class="fab fa-github"></i>
-                  <span>Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="project-card-terminal"
-            data-animate="fade-up"
-            data-delay="300"
-          >
-            <div class="project-header-terminal">
-              <span class="project-folder">📁</span>
-              <span class="project-name">house-rental-service</span>
-            </div>
-            <div class="project-content-terminal">
-              <h3 class="project-title-terminal">House Rental Service</h3>
-              <p class="project-description-terminal">
-                Online house rental management system for web and mobile
-                applications with geolocation and payment integration.
-              </p>
-              <div class="project-tech-terminal">
-                <span>PostgreSQL</span>
-                <span>Spring Boot</span>
-                <span>Firebase</span>
-                <span>Razorpay</span>
-              </div>
-              <div class="project-links-terminal">
-                <a href="#" class="project-link-terminal" data-magnetic>
-                  <i class="fas fa-external-link-alt"></i>
-                  <span>Live</span>
-                </a>
-                <a href="#" class="project-link-terminal" data-magnetic>
-                  <i class="fab fa-github"></i>
-                  <span>Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="project-card-terminal"
-            data-animate="fade-up"
-            data-delay="400"
-          >
-            <div class="project-header-terminal">
-              <span class="project-folder">📁</span>
-              <span class="project-name">endoctor</span>
-            </div>
-            <div class="project-content-terminal">
-              <h3 class="project-title-terminal">Endoctor</h3>
-              <p class="project-description-terminal">
-                Enterprise application to secure patient details in encrypted
-                manner based on RBAC using Node.js and Express.js.
-              </p>
-              <div class="project-tech-terminal">
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>TypeScript</span>
-                <span>MySQL</span>
-              </div>
-              <div class="project-links-terminal">
-                <a href="#" class="project-link-terminal" data-magnetic>
-                  <i class="fas fa-external-link-alt"></i>
-                  <span>Live</span>
-                </a>
-                <a href="#" class="project-link-terminal" data-magnetic>
-                  <i class="fab fa-github"></i>
-                  <span>Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="project-card-terminal"
-            data-animate="fade-up"
-            data-delay="500"
-          >
-            <div class="project-header-terminal">
-              <span class="project-folder">📁</span>
-              <span class="project-name">cutof-offers</span>
-            </div>
-            <div class="project-content-terminal">
-              <h3 class="project-title-terminal">Cutof Offers</h3>
-              <p class="project-description-terminal">
-                App connecting shoppers with similar purchasing goals. Features
-                AI-powered recommendations, live streaming, and payment
-                processing.
-              </p>
-              <div class="project-tech-terminal">
-                <span>Go</span>
-                <span>Python</span>
-                <span>PostgreSQL</span>
-                <span>MongoDB</span>
-              </div>
-              <div class="project-links-terminal">
-                <a href="#" class="project-link-terminal" data-magnetic>
-                  <i class="fas fa-external-link-alt"></i>
-                  <span>Live</span>
-                </a>
-                <a href="#" class="project-link-terminal" data-magnetic>
-                  <i class="fab fa-github"></i>
-                  <span>Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="section" id="experience"><div class="container"><div class="section-top reveal"><div><div class="section-label"><b>05 /</b> EXPERIENCE</div><h2>From architecture<br><span class="soft">to production.</span></h2></div><p class="section-intro">Engineering work centered on scalability, secure workflows, and operational reliability.</p></div>
+<div class="timeline reveal"><div class="timeline-item"><div class="timeline-meta"><span>COIMBATORE, INDIA</span><span>·</span><span class="pill">CURRENT ROLE</span></div><h3>Software Engineer</h3><div class="company">Widelast Technology Pvt Ltd</div><p>Designing and developing scalable backend services with Java, Go, Spring Boot, and microservices architecture.</p><ul><li>Implemented Kafka-based event-driven architecture and gRPC communication for asynchronous processing and distributed service interactions.</li><li>Optimized PostgreSQL, MySQL, MongoDB, Cassandra, and Redis using data modeling, indexing, caching, replication, and consistency strategies.</li><li>Developed REST, GraphQL, and WebSocket APIs; integrated Stripe and Razorpay workflows with webhook handling, idempotency, and failure recovery.</li><li>Automated deployments with Jenkins CI/CD on AWS and added health checks, monitoring, and Swagger/OpenAPI documentation.</li></ul><a class="project-link" href="https://widelast.com/" target="_blank" rel="noopener noreferrer">WIDELAST.COM <i class="bi bi-arrow-up-right"></i></a></div></div></div></section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="section-terminal achievements-terminal">
-      <div class="container-terminal">
-        <div class="section-header-terminal" data-animate="fade-up">
-          <span class="section-number">[06]</span>
-          <h2 class="section-title-terminal">achievements()</h2>
-        </div>
-        <div class="achievements-grid-terminal">
-          <div
-            class="achievement-card-terminal"
-            data-animate="fade-up"
-            data-delay="100"
-          >
-            <div class="achievement-icon-terminal">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <h3 class="achievement-title-terminal">Java Certification</h3>
-            <p class="achievement-description-terminal">
-              Live Wire National Skill Development
-            </p>
-            <div class="achievement-date">December 2022</div>
-          </div>
-          <div
-            class="achievement-card-terminal"
-            data-animate="fade-up"
-            data-delay="200"
-          >
-            <div class="achievement-icon-terminal">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <h3 class="achievement-title-terminal">C++ Certification</h3>
-            <p class="achievement-description-terminal">
-              Live Wire National Skill Development
-            </p>
-            <div class="achievement-date">November 2022</div>
-          </div>
-          <div
-            class="achievement-card-terminal"
-            data-animate="fade-up"
-            data-delay="300"
-          >
-            <div class="achievement-icon-terminal">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <h3 class="achievement-title-terminal">C & MySQL Certification</h3>
-            <p class="achievement-description-terminal">
-              Live Wire National Skill Development
-            </p>
-            <div class="achievement-date">October 2022</div>
-          </div>
-          <div
-            class="achievement-card-terminal"
-            data-animate="fade-up"
-            data-delay="400"
-          >
-            <div class="achievement-icon-terminal">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <h3 class="achievement-title-terminal">Full Stack Development</h3>
-            <p class="achievement-description-terminal">Naukri Certification</p>
-            <div class="achievement-date">2022</div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="section alt" id="education"><div class="container"><div class="section-top reveal"><div><div class="section-label"><b>06 /</b> EDUCATION & LEARNING</div><h2>Strong foundations.<br><span class="soft">Continuous growth.</span></h2></div></div><div class="education-grid">
+<div class="education-card reveal"><i class="bi bi-mortarboard"></i><span class="year">APR 2021</span><h3>Mechanical Engineering</h3><p>Chettinad College of Engineering and Technology</p><div class="sub">GPA listed on resume: 7.2</div></div>
+<div class="education-card reveal" data-delay="1"><i class="bi bi-terminal"></i><span class="year">NOV 2022</span><h3>Java Software Development</h3><p>National Skill Development Corporation · Live Wire</p><div class="sub">Additional training: C++, C / MySQL, full-stack development</div></div>
+</div></div></section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-terminal contact-terminal">
-      <div class="container-terminal">
-        <div class="section-header-terminal" data-animate="fade-up">
-          <span class="section-number">[07]</span>
-          <h2 class="section-title-terminal">contact()</h2>
-        </div>
-        <div class="contact-grid-terminal">
-          <div class="contact-info-terminal" data-animate="fade-right">
-            <div class="terminal-window">
-              <div class="terminal-header">
-                <div class="terminal-buttons">
-                  <span class="btn-close"></span>
-                  <span class="btn-minimize"></span>
-                  <span class="btn-maximize"></span>
-                </div>
-                <div class="terminal-title">contact_info.txt</div>
-              </div>
-              <div class="terminal-body">
-                <div class="contact-item-terminal">
-                  <span class="prompt">$</span>
-                  <span class="command">email</span>
-                </div>
-                <div class="contact-output">
-                  <a href="mailto:pdeepankumar2023@gmail.com" data-magnetic>
-                    pdeepankumar2023@gmail.com
-                  </a>
-                </div>
-                <div class="contact-item-terminal">
-                  <span class="prompt">$</span>
-                  <span class="command">phone</span>
-                </div>
-                <div class="contact-output">
-                  <a href="tel:+918072617953" data-magnetic>+91 8072617953</a>
-                </div>
-                <div class="contact-item-terminal">
-                  <span class="prompt">$</span>
-                  <span class="command">location</span>
-                </div>
-                <div class="contact-output">Coimbatore, India</div>
-              </div>
-            </div>
-            <div class="social-links-terminal">
-              <a href="#" class="social-link-terminal" data-magnetic>
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="#" class="social-link-terminal" data-magnetic>
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="#" class="social-link-terminal" data-magnetic>
-                <i class="fab fa-twitter"></i>
-              </a>
-            </div>
-          </div>
-          <div class="contact-form-terminal" data-animate="fade-left">
-            <div class="terminal-window">
-              <div class="terminal-header">
-                <div class="terminal-buttons">
-                  <span class="btn-close"></span>
-                  <span class="btn-minimize"></span>
-                  <span class="btn-maximize"></span>
-                </div>
-                <div class="terminal-title">send_message.sh</div>
-              </div>
-              <div class="terminal-body">
-                <form id="contact-form" class="form-terminal">
-                  <div class="form-group-terminal">
-                    <label class="form-label-terminal">
-                      <span class="prompt">$</span> Name:
-                    </label>
-                    <input
-                      type="text"
-                      class="form-input-terminal"
-                      placeholder="Enter your name"
-                      required
-                    />
-                  </div>
-                  <div class="form-group-terminal">
-                    <label class="form-label-terminal">
-                      <span class="prompt">$</span> Email:
-                    </label>
-                    <input
-                      type="email"
-                      class="form-input-terminal"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                  <div class="form-group-terminal">
-                    <label class="form-label-terminal">
-                      <span class="prompt">$</span> Message:
-                    </label>
-                    <textarea
-                      class="form-input-terminal"
-                      rows="5"
-                      placeholder="Enter your message"
-                      required
-                    ></textarea>
-                  </div>
-                  <button type="submit" class="btn-terminal" data-magnetic>
-                    <span>send_message()</span>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="section contact-section" id="contact"><div class="container"><div class="contact-shell reveal">
+<div class="contact-left"><div class="section-label"><b>07 /</b> CONTACT & COLLABORATION</div><div class="contact-eyebrow"><span class="live-dot"></span> OPEN TO A GOOD TECHNICAL CONVERSATION</div><h2>Have a system to<br>make <span class="shine">better?</span></h2><p>Tell me what you're building, the problem you're working through, or the role you think could be a fit. I read every message.</p>
+<div class="contact-methods"><a href="mailto:deepankumarpalaniyappan@gmail.com" class="contact-method"><span class="method-icon"><i class="bi bi-envelope"></i></span><span><small>EMAIL</small><strong>deepankumarpalaniyappan@gmail.com</strong></span><i class="bi bi-arrow-up-right method-arrow"></i></a><a href="https://www.linkedin.com/in/deepankumar-palaniyappan/" target="_blank" rel="noopener noreferrer" class="contact-method"><span class="method-icon"><i class="bi bi-linkedin"></i></span><span><small>PROFESSIONAL NETWORK</small><strong>Connect on LinkedIn</strong></span><i class="bi bi-arrow-up-right method-arrow"></i></a><div class="contact-location"><i class="bi bi-geo-alt"></i> Coimbatore, Tamil Nadu, India <span>·</span> <i class="bi bi-clock"></i> IST (UTC+5:30)</div></div></div>
+<div class="contact-right"><div class="form-heading"><span class="mono">MESSAGE / 01</span><span class="form-status"><span class="live-dot"></span> READY TO CONNECT</span></div><h3>Start a conversation</h3><p class="form-subtitle">A few details is all it takes.</p>
+<form id="contactForm"><label for="contactName">YOUR NAME</label><input id="contactName" name="name" type="text" placeholder="How should I address you?" required maxlength="100"><label for="contactEmail">YOUR EMAIL</label><input id="contactEmail" name="email" type="email" placeholder="you@company.com" required maxlength="160"><label for="contactTopic">WHAT'S THIS ABOUT?</label><select id="contactTopic" name="topic"><option>Backend engineering opportunity</option><option>Technical collaboration</option><option>Project or architecture discussion</option><option>Other</option></select><label for="contactMessage">MESSAGE</label><textarea id="contactMessage" name="message" placeholder="Share a little context..." rows="4" required maxlength="2000"></textarea><button type="submit" class="btn btn-primary contact-submit">PREPARE EMAIL <i class="bi bi-arrow-up-right ms-2"></i></button><p class="form-footnote"><i class="bi bi-lock"></i> This opens your email app with the message prefilled. Nothing is stored on this website.</p><div id="formFeedback" class="form-feedback" role="status" aria-live="polite"></div></form></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container"><span>© <span id="year"></span> DEEPANKUMAR PALANIYAPPAN</span><span>DESIGNED WITH INTENT · ENGINEERED FOR CLARITY</span><a href="#home">BACK TO TOP ↑</a></div></footer>
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js" defer></script>
 
-    <!-- Footer -->
-    <footer class="footer-terminal">
-      <div class="container-terminal">
-        <div class="footer-content-terminal">
-          <div class="terminal-line">
-            <span class="prompt">$</span>
-            <span class="command"
-              >echo "Built with passion and dedication"</span
-            >
-          </div>
-          <div class="terminal-output">
-            &copy; 2024 Deepankumar Palaniyappan. All rights reserved.
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/main.js"></script>
-  </body>
-</html>
+</body></html>
